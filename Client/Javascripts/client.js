@@ -13,6 +13,22 @@
 var main = function(){
 	"use strict";
 
+	//Initialize the results portion of the page.
+	function initializeResults(){
+		$(".results").append($("<p>").addClass("outcome"));
+		$(".results").append($("<p>").addClass("wins"));
+		$(".results").append($("<p>").addClass("losses"));
+		$(".results").append($("<p>").addClass("ties"));
+	}
+
+	//Update the results portion of the page after each round of the game.
+	function updateResults(results){
+		$(".outcome").text("Outcome of round: " + results.outcome);
+		$(".wins").text("Number of wins: " + results.wins);
+		$(".losses").text("Number of losses: " + results.losses);
+		$(".ties").text("Number of ties: " + results.ties);
+	}
+
 	//console.log("Hello Vane!");
 
 	//Create variable names for the five buttons.
@@ -29,6 +45,8 @@ var main = function(){
 	$(".playerChoice").append($lizard);
 	$(".playerChoice").append($spock);
 
+	initializeResults();
+
 	//Create button handlers for the five buttons.
 	$rock.on("click", function(){
 		console.log("rock button clicked");
@@ -38,6 +56,8 @@ var main = function(){
 			console.log("Successfully posted rock to the server");
 
 			console.log(res);
+
+			updateResults(res);
 		});
 	});
 
@@ -48,6 +68,8 @@ var main = function(){
 			console.log("Successfully posted paper to the server");
 
 			console.log(res);
+
+			updateResults(res);
 		});
 	});
 
@@ -58,6 +80,8 @@ var main = function(){
 			console.log("Successfully posted scissors to the server");
 
 			console.log(res);
+
+			updateResults(res);
 		});
 	});
 
@@ -68,6 +92,8 @@ var main = function(){
 			console.log("Successfully posted lizard to the server");
 
 			console.log(res);
+
+			updateResults(res);
 		});
 	});
 
@@ -78,6 +104,8 @@ var main = function(){
 			console.log("Successfully posted spock to the server");
 
 			console.log(res);
+
+			updateResults(res);
 		});
 	});
 
