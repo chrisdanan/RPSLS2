@@ -169,6 +169,8 @@ app.post("/play/paper", function(req, res){
 	console.log("Outcome: " + outcome);
 	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
 
+	updateJSON();
+
 	res.json(stats);
 });
 
@@ -186,6 +188,8 @@ app.post("/play/scissors", function(req, res){
 	outcome = playing(player, computer);
 	console.log("Outcome: " + outcome);
 	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
+
+	updateJSON();
 
 	res.json(stats);
 });
@@ -205,6 +209,8 @@ app.post("/play/lizard", function(req, res){
 	console.log("Outcome: " + outcome);
 	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
 
+	updateJSON();
+
 	res.json(stats);
 });
 
@@ -222,6 +228,8 @@ app.post("/play/spock", function(req, res){
 	outcome = playing(player, computer);
 	console.log("Outcome: " + outcome);
 	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
+
+	updateJSON();
 
 	res.json(stats);
 });
