@@ -29,46 +29,84 @@ app.use(bodyParser());
 http.createServer(app).listen(3000);
 console.log("Server listening on port 3000");
 
+//Get the server choice via a random selection from the choices array.
+var getServerChoice = function(){
+	//Select a random number from 0 - 4, which will act as a random index for the choices array.
+	var randomNumber = Math.floor(Math.random() * 5);
+
+	return choices[randomNumber];
+
+};
+
 app.get("/test", function(req, res){
 	res.send("You routed to the test page, here's a cookie");
 });
 
 app.post("/play/rock", function(req, res){
 	console.log("Server received post");
-	console.log("Request body: " + req.body);
-	console.log("Player Choice: " + req.body.playerChoice);
+	//console.log("Request body: " + req.body);
+	//console.log("Player Choice: " + req.body.playerChoice);
 
+	playerChoice = req.body.playerChoice;
+	serverChoice = getServerChoice();
+
+	console.log("Player choice: " + playerChoice);
+	console.log("Server choice: " + serverChoice);
 	res.end();
 });
 
 app.post("/play/paper", function(req, res){
 	console.log("Server received post");
-	console.log("Request body: " + req.body);
-	console.log("Player Choice: " + req.body.playerChoice);
+	//console.log("Request body: " + req.body);
+	//console.log("Player Choice: " + req.body.playerChoice);
+
+	playerChoice = req.body.playerChoice;
+	serverChoice = getServerChoice();
+
+	console.log("Player choice: " + playerChoice);
+	console.log("Server choice: " + serverChoice);
 
 	res.end();
 });
 
 app.post("/play/scissors", function(req, res){
 	console.log("Server received post");
-	console.log("Request body: " + req.body);
-	console.log("Player Choice: " + req.body.playerChoice);
+	//console.log("Request body: " + req.body);
+	//console.log("Player Choice: " + req.body.playerChoice);
+
+	playerChoice = req.body.playerChoice;
+	serverChoice = getServerChoice();
+
+	console.log("Player choice: " + playerChoice);
+	console.log("Server choice: " + serverChoice);
 
 	res.end();
 });
 
 app.post("/play/lizard", function(req, res){
 	console.log("Server received post");
-	console.log("Request body: " + req.body);
-	console.log("Player Choice: " + req.body.playerChoice);
+	//console.log("Request body: " + req.body);
+	//console.log("Player Choice: " + req.body.playerChoice);
+
+	playerChoice = req.body.playerChoice;
+	serverChoice = getServerChoice();
+
+	console.log("Player choice: " + playerChoice);
+	console.log("Server choice: " + serverChoice);
 
 	res.end();
 });
 
 app.post("/play/spock", function(req, res){
 	console.log("Server received post");
-	console.log("Request body: " + req.body);
-	console.log("Player Choice: " + req.body.playerChoice);
+	//console.log("Request body: " + req.body);
+	//console.log("Player Choice: " + req.body.playerChoice);
+
+	playerChoice = req.body.playerChoice;
+	serverChoice = getServerChoice();
+
+	console.log("Player choice: " + playerChoice);
+	console.log("Server choice: " + serverChoice);
 
 	res.end();
 });
