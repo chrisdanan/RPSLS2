@@ -16,6 +16,9 @@ var express = require("express"),
 	bodyParser = require("body-parser"),
 	http = require("http"),
 	app = express(),
+	choices = ["rock", "paper", "scissors", "lizard", "spock"],
+	playerChoice,
+	serverChoice,
 	wins = 0,
 	losses = 0,
 	ties = 0;
@@ -32,35 +35,40 @@ app.get("/test", function(req, res){
 
 app.post("/play/rock", function(req, res){
 	console.log("Server received post");
-	console.log(req.body);
+	console.log("Request body: " + req.body);
+	console.log("Player Choice: " + req.body.playerChoice);
 
 	res.end();
 });
 
 app.post("/play/paper", function(req, res){
 	console.log("Server received post");
-	console.log(req.body);
+	console.log("Request body: " + req.body);
+	console.log("Player Choice: " + req.body.playerChoice);
 
 	res.end();
 });
 
 app.post("/play/scissors", function(req, res){
 	console.log("Server received post");
-	console.log(req.body);
+	console.log("Request body: " + req.body);
+	console.log("Player Choice: " + req.body.playerChoice);
 
 	res.end();
 });
 
 app.post("/play/lizard", function(req, res){
 	console.log("Server received post");
-	console.log(req.body);
+	console.log("Request body: " + req.body);
+	console.log("Player Choice: " + req.body.playerChoice);
 
 	res.end();
 });
 
 app.post("/play/spock", function(req, res){
 	console.log("Server received post");
-	console.log(req.body);
+	console.log("Request body: " + req.body);
+	console.log("Player Choice: " + req.body.playerChoice);
 
 	res.end();
 });
