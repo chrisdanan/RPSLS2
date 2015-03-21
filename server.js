@@ -53,40 +53,51 @@ function compMakeMove() {
 function playing(player, computer){
     if(player === computer){
     	console.log("TIE");
+    	ties++;
     } else if(player === "rock"){
    		if(computer === "scissors" || computer === "lizard") {
     		console.log("WIN");
+    		wins++;
     	}
     	else if(computer === "paper" || computer === "spock"){
     		console.log("LOSE");
+    		losses++;
     	}
     } else if(player === "paper") {
     	if(computer === "rock" || computer === "spock") {
     		console.log("WIN");
+    		wins++;
     	}
     	else if(computer === "scissors" || computer === "lizard"){
     		console.log("LOSE");
+    		losses++;
     	}
     } else if(player === "scissors") {
     	if(computer === "paper" || computer === "lizard") {
     		console.log("WIN");
+    		wins++;
     	}
     	else if(computer === "rock" || computer === "spock"){
     		console.log("LOSE");
+    		losses++;
     	}
     } else if(player === "lizard") {
     	if(computer === "paper" || computer === "spock") {
     		console.log("WIN");
+    		wins++;
     	}
     	else if(computer === "rock" || computer === "scissors"){
     		console.log("LOSE");
+    		losses++;
 		}
     } else if(player === "spock") {
     	if(computer === "rock" || computer === "scissors") {
     		console.log("WIN");
+    		wins++;
     	}
     	else if(computer === "paper" || computer === "lizard"){
     		console.log("LOSE");
+    		losses++;
     	}
     }
 }
@@ -107,7 +118,9 @@ app.post("/play/rock", function(req, res){
 	console.log("Computer choice: " + computer);
 
 	playing(player, computer);
-	
+
+	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
+
 	res.end();
 });
 
@@ -123,6 +136,8 @@ app.post("/play/paper", function(req, res){
 	console.log("Computer choice: " + computer);
 
 	playing(player, computer);
+
+	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
 
 	res.end();
 });
@@ -140,6 +155,8 @@ app.post("/play/scissors", function(req, res){
 
 	playing(player, computer);
 
+	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
+
 	res.end();
 });
 
@@ -155,6 +172,8 @@ app.post("/play/lizard", function(req, res){
 	console.log("Computer choice: " + computer);
 
 	playing(player, computer);
+
+	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
 
 	res.end();
 });
@@ -172,5 +191,10 @@ app.post("/play/spock", function(req, res){
 
 	playing(player, computer);
 
+	console.log("Wins: " + wins + "; Losses: " + losses + "; Ties: " + ties);
+
 	res.end();
 });
+
+//t
+//fflvd
