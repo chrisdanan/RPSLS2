@@ -32,22 +32,43 @@ var main = function(){
 	//Create button handlers for the five buttons.
 	$rock.on("click", function(){
 		console.log("rock button clicked");
+
+		//Post to the server the player's choice.
+		$.post("/play/rock", {"playerChoice" : "rock"}, function(res){
+			console.log("Successfully posted rock to the server");
+		});
 	});
 
 	$paper.on("click", function(){
 		console.log("paper button clicked");
+
+		$.post("/play/paper", {"playerChoice" : "paper"}, function(res){
+			console.log("Successfully posted paper to the server");
+		});
 	});
 
 	$scissors.on("click", function(){
 		console.log("scissors button clicked");
+
+		$.post("/play/scissors", {"playerChoice" : "scissors"}, function(res){
+			console.log("Successfully posted scissors to the server");
+		});
 	});
 
 	$lizard.on("click", function(){
 		console.log("lizard button clicked");
+
+		$.post("/play/lizard", {"playerChoice": "lizard"}, function(res){
+			console.log("Successfully posted lizard to the server");
+		});
 	});
 
 	$spock.on("click", function(){
 		console.log("spock button clicked");
+
+		$.post("play/spock", {"playerChoice" : "spock"}, function(res){
+			console.log("Successfully posted spock to the server");
+		});
 	});
 
 };
