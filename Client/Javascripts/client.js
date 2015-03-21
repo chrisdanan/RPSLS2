@@ -36,6 +36,8 @@ var main = function(){
 		//Post to the server the player's choice.
 		$.post("/play/rock", {"playerChoice" : "rock"}, function(res){
 			console.log("Successfully posted rock to the server");
+
+			console.log(res);
 		});
 	});
 
@@ -44,6 +46,8 @@ var main = function(){
 
 		$.post("/play/paper", {"playerChoice" : "paper"}, function(res){
 			console.log("Successfully posted paper to the server");
+
+			console.log(res);
 		});
 	});
 
@@ -52,6 +56,8 @@ var main = function(){
 
 		$.post("/play/scissors", {"playerChoice" : "scissors"}, function(res){
 			console.log("Successfully posted scissors to the server");
+
+			console.log(res);
 		});
 	});
 
@@ -60,6 +66,8 @@ var main = function(){
 
 		$.post("/play/lizard", {"playerChoice": "lizard"}, function(res){
 			console.log("Successfully posted lizard to the server");
+
+			console.log(res);
 		});
 	});
 
@@ -68,6 +76,8 @@ var main = function(){
 
 		$.post("play/spock", {"playerChoice" : "spock"}, function(res){
 			console.log("Successfully posted spock to the server");
+
+			console.log(res);
 		});
 	});
 
