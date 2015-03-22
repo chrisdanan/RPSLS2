@@ -27,6 +27,15 @@ header .authors{
 	margin-right: 10px;
 }
 
+a{
+	text-decoration: none;
+	color: #675c48;
+}
+
+a:hover{
+	color: #ade6f2;
+}
+
 button{
 	font-size: 130%;
 	background-color: #ade6f2;
@@ -64,6 +73,7 @@ h1{
 	font-size: 200%;
 	color: #bf1603;
 }
+
 button:hover{
 	cursor: pointer;
 }
