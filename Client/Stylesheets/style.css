@@ -32,8 +32,18 @@ a{
 	color: #675c48;
 }
 
-a:hover{
+a:hover, a.tutorial:hover{
 	color: #ade6f2;
+}
+
+footer p{
+	margin-top: 50px;
+	text-align: center;
+}
+
+a.tutorial{
+	color: #675c48;
+	font-weight: bold;
 }
 
 button{
