@@ -2,7 +2,7 @@
  *Names: Sarah Lee
  		Christopher Dancarlo Danan
  *Created: March 20, 2015
- *Modified: March 20, 2015
+ *Modified: March 21, 2015
  *Purpose: This holds the client side javascript for Rock, Paper, Scissors, Lizard, Spock.
  *References:
 */
@@ -15,9 +15,10 @@ var main = function(){
 
 	//Initialize the results portion of the page.
 	function initializeResults(){
+		$(".results").append($("<p>").addClass("outcome"));
 		$(".results").append($("<p>").addClass("player"));
 		$(".results").append($("<p>").addClass("computer"));
-		$(".results").append($("<p>").addClass("outcome"));
+		//$(".results").append($("<p>").addClass("outcome"));
 		$(".results").append($("<p>").addClass("wins"));
 		$(".results").append($("<p>").addClass("losses"));
 		$(".results").append($("<p>").addClass("ties"));
@@ -25,9 +26,10 @@ var main = function(){
 
 	//Update the results portion of the page after each round of the game.
 	function updateResults(results){
+		$(".outcome").text(results.outcome);
 		$(".player").text("Player chose: " + results.playerChoice);
 		$(".computer").text("Computer chose: " + results.computerChoice);
-		$(".outcome").text("Outcome of round: " + results.outcome);
+		//$(".outcome").text("Outcome of round: " + results.outcome);
 		$(".wins").text("Number of wins: " + results.wins);
 		$(".losses").text("Number of losses: " + results.losses);
 		$(".ties").text("Number of ties: " + results.ties);
