@@ -27,7 +27,9 @@ var express = require("express"),
 	stats = {"outcome" : outcome,
 			 "wins" : wins,
 			 "losses" : losses,
-			 "ties" : ties};	
+			 "ties" : ties,
+			 "playerChoice" : player,
+			 "computerChoice" : computer};	
 
 //All static files are located in the Client directory.
 app.use(express.static(__dirname + "/Client"));
@@ -125,6 +127,8 @@ function updateJSON(){
 	stats.wins = wins;
 	stats.losses = losses;
 	stats.ties = ties;
+	stats.playerChoice = player;
+	stats.computerChoice = computer;
 
 	//console.log(stats);
 }

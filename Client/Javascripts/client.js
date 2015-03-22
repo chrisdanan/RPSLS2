@@ -15,6 +15,8 @@ var main = function(){
 
 	//Initialize the results portion of the page.
 	function initializeResults(){
+		$(".results").append($("<p>").addClass("player"));
+		$(".results").append($("<p>").addClass("computer"));
 		$(".results").append($("<p>").addClass("outcome"));
 		$(".results").append($("<p>").addClass("wins"));
 		$(".results").append($("<p>").addClass("losses"));
@@ -23,6 +25,8 @@ var main = function(){
 
 	//Update the results portion of the page after each round of the game.
 	function updateResults(results){
+		$(".player").text("Player chose: " + results.playerChoice);
+		$(".computer").text("Computer chose: " + results.computerChoice);
 		$(".outcome").text("Outcome of round: " + results.outcome);
 		$(".wins").text("Number of wins: " + results.wins);
 		$(".losses").text("Number of losses: " + results.losses);
