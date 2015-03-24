@@ -38,11 +38,11 @@ var main = function(){
 	//console.log("Hello Vane!");
 
 	//Create variable names for the five buttons.
-	var $rock = $("<button>").text("Rock").addClass("rockBtn"),
-		$paper = $("<button>").text("Paper").addClass("paperBtn"),
-		$scissors = $("<button>").text("Scissors").addClass("scissorsBtn"),
-		$lizard = $("<button>").text("Lizard").addClass("lizardBtn"),
-		$spock = $("<button>").text("Spock").addClass("spockBtn");
+	var $rock = $("<button>").text("Rock").addClass("rockBtn rpslsChoice"),
+		$paper = $("<button>").text("Paper").addClass("paperBtn rpslsChoice"),
+		$scissors = $("<button>").text("Scissors").addClass("scissorsBtn rpslsChoice"),
+		$lizard = $("<button>").text("Lizard").addClass("lizardBtn rpslsChoice"),
+		$spock = $("<button>").text("Spock").addClass("spockBtn rpslsChoice");
 
 	//Append the five buttons to the html page.
 	$(".playerChoice").append($rock);
